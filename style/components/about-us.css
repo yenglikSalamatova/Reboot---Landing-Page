@@ -1,0 +1,111 @@
+.main__about {
+  background-color: var(--white-color);
+  padding-top: 9rem;
+  padding-bottom: 0;
+}
+.about__content {
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr;
+  gap: 4rem;
+}
+.about__left {
+  /* width: calc(45% - 2rem); */
+  position: relative;
+  align-self: end;
+  justify-content: center;
+}
+
+.about__left-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  width: 1.2rem;
+  height: 15rem;
+  border-radius: 5rem;
+}
+.about__left-circle {
+  position: absolute;
+  opacity: 0.3;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transition: all 0.4s;
+  top: 3rem;
+  left: -8rem;
+  width: 10rem;
+  height: 10rem;
+  animation-name: circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.about__left-img {
+  max-width: 90%;
+  height: 100%;
+  object-fit: contain;
+}
+.about__right-text {
+  margin-bottom: 2.8rem;
+}
+.about__right-heading-two {
+  margin-bottom: 2.4rem;
+}
+.about__right-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about__right-badge {
+  width: calc(50% - 1rem);
+  padding: 2.5rem;
+  box-shadow: 0.2rem 0 1.5rem 0.5rem rgb(1 6 33 / 6%);
+  border-radius: 1rem;
+  position: relative;
+  transition: all 0.4s;
+  z-index: 1;
+  background: linear-gradient(var(--white-color) 50%, var(--main-color) 50%);
+  background-size: 250% 250%;
+}
+.about__right-badge_heading-three {
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.about__right-badge-i {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-right: 1rem;
+}
+
+.about__right-badge:hover .about__right-badge_heading-three,
+.about__right-badge:hover .about__right-badge-i,
+.about__right-badge:hover .about__right-badge-p {
+  color: var(--white-color);
+}
+.about__right-badge:hover {
+  transform: translateY(-0.5rem);
+  background-position: 200% -80%;
+}
+@media (max-width: 1000px) {
+  .about__content {
+    grid-template-columns: 1fr;
+  }
+  .about__left {
+    width: 80%;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+}
+@media (max-width: 1270px) {
+  .about__right {
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 770px) {
+  .about__right-badge {
+    width: 100%;
+  }
+}

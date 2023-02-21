@@ -1,0 +1,222 @@
+/* VARIABLES */
+:root {
+  /* Colors */
+  --main-color: #7432ff;
+  --white-color: #fff;
+  --back-gray: #f0f4ff;
+  --heading-color: #161e2e;
+  --text-color: #4a4f61;
+  --footer: #0d1321;
+}
+
+html {
+  /* 1 rem = 10px */
+  font-size: 62.5%;
+  /*при переходе на ссылку задает паддинг топ*/
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 8rem;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+p {
+  color: var(--text-color);
+  line-height: 1.8;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.container {
+  /* padding: 0rem 16%; */
+  max-width: 132rem;
+  margin: 0 auto;
+}
+.heading-one {
+  font-family: "Poppins", sans-serif;
+  color: var(--heading-color);
+  font-size: 5.8rem;
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  padding: 2rem 3.5rem;
+  border-radius: 0.7rem;
+  transition: 0.4s;
+  background: linear-gradient(
+    -90deg,
+    var(--heading-color) 50%,
+    var(--main-color) 50%
+  );
+  background-size: 200%;
+}
+.btn:hover,
+.btn:active {
+  color: var(--white-color);
+  background-position: -100% 200%;
+}
+
+.heading {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  color: var(--heading-color);
+}
+.subheading {
+  font-family: "Inter", sans-serif;
+  display: block;
+  font-size: 2rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+}
+.heading-two {
+  font-family: "Poppins", sans-serif;
+  color: var(--heading-color);
+  font-size: 4rem;
+}
+.heading-three {
+  font-family: "Poppins", sans-serif;
+  color: var(--heading-color);
+  font-size: 2.5rem;
+}
+.circle-filled-icon {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  border-radius: 50%;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  transition: background-position 0.3s ease-in-out, color 0.2s linear;
+  background: linear-gradient(
+    -90deg,
+    var(--main-color) 50%,
+    var(--back-gray) 50%
+  );
+  background-size: 200%;
+}
+.circle-checkbox {
+  color: var(--main-color);
+  border: 0.1rem solid var(--main-color);
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+/* .circle-filled-icon:hover {
+  color: var(--white-color);
+  background-position: -100% 200%;
+} */
+.video-playbtn {
+  cursor: pointer;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.034);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wave {
+  width: 10rem;
+  height: 10rem;
+  top: 50%;
+  right: 50%;
+  margin-top: -5rem;
+  margin-right: -5rem;
+  background-color: var(--white-color);
+  position: absolute;
+  opacity: 0;
+  border-radius: 50%;
+  z-index: -1;
+  animation: choose-us__video-playbtn 5s ease-in-out infinite;
+}
+.choose-us__video-playbtn-wave1 {
+  animation-delay: 1s;
+}
+.choose-us__video-playbtn-wave2 {
+  animation-delay: 0.1s;
+}
+.choose-us__video-playbtn-wave3 {
+  animation-delay: 2s;
+}
+
+@keyframes choose-us__video-playbtn {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@keyframes circle {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10rem);
+  }
+}
+@keyframes shapes-circle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1rem);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1470px) {
+  .container {
+    max-width: 114rem;
+  }
+}
+@media (max-width: 1270px) {
+  .container {
+    max-width: 96rem;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    max-width: 72rem;
+  }
+}
+@media (max-width: 770px) {
+  .container {
+    max-width: 54rem;
+  }
+  .heading-two {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+}

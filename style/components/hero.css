@@ -1,0 +1,219 @@
+.main__hero {
+  background-color: var(--back-gray);
+  padding-top: 13rem;
+  padding-bottom: 9.8rem;
+  position: relative;
+}
+.hero__content {
+  display: flex;
+  gap: 10rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero__circle {
+  position: absolute;
+  opacity: 0.3;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transition: all 0.4s;
+  top: 20%;
+  left: -1.5%;
+  z-index: 3;
+  width: 10rem;
+  height: 10rem;
+  animation-name: circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.hero__left {
+  width: calc(50% - 5rem);
+  /* width: 60rem; */
+}
+.hero__heading-one {
+  margin-bottom: 2.8rem;
+}
+.hero__left-text {
+  font-size: 2rem;
+  margin-bottom: 2.8rem;
+}
+.hero__right {
+  /* display: flex;
+  justify-content: flex-end; */
+  /* width: 45rem; */
+  width: calc(50% - 5rem);
+  min-height: 60rem;
+  position: relative;
+  z-index: 4;
+}
+.hero__right-shape-1 {
+  width: 17rem;
+  position: absolute;
+  top: 5rem;
+  right: 30rem;
+  z-index: -2;
+  animation: shapes-circle 15s linear infinite alternate;
+}
+.hero__right-shape-2 {
+  width: 17rem;
+  position: absolute;
+  bottom: -6rem;
+  right: -10rem;
+  z-index: -2;
+  animation: shapes-circle 15s linear infinite alternate-reverse;
+}
+
+.hero_right-back-figure {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-color);
+  width: 65%;
+  height: 50rem;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0 90%,
+    0 10%
+  );
+  z-index: -1;
+}
+.hero__right-img {
+  position: absolute;
+  bottom: 0;
+  right: -16%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero_right-badge {
+  position: absolute;
+  width: 20rem;
+  padding: 1.4rem 2rem;
+  background-color: var(--white-color);
+  border-radius: 0.7rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.034);
+}
+.hero_right-badge-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  color: var(--heading-color);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.hero_right-badge-text {
+  font-size: 1.6rem;
+}
+.hero_right-badge-1 {
+  top: 18rem;
+  right: 38rem;
+}
+.hero_right-badge-2 {
+  top: 42rem;
+  right: 35rem;
+}
+.hero_right-badge-3 {
+  top: 28rem;
+  right: -18rem;
+}
+@media (max-width: 1700px) {
+  .hero_right-badge-3 {
+    top: 45rem;
+    right: -3rem;
+  }
+}
+@media (max-width: 1600px) {
+  .hero__right-shape-2 {
+    right: -4rem;
+  }
+  .hero_right-badge-3 {
+    top: 42rem;
+    right: 0;
+  }
+}
+@media (max-width: 1470px) {
+  .hero_right-back-figure {
+    width: 78%;
+    height: 50rem;
+  }
+  .hero_right-badge-1 {
+    top: 18rem;
+    right: 30rem;
+  }
+  .hero_right-badge-2 {
+    top: 42rem;
+    right: 28rem;
+  }
+
+  .hero__right-img {
+    right: -10%;
+  }
+}
+@media (max-width: 1270px) {
+  .hero__right-shape-1 {
+    top: 1rem;
+    right: 21rem;
+  }
+  .hero__right {
+    min-height: 50rem;
+  }
+  .hero_right-back-figure {
+    height: 45rem;
+  }
+  .hero__heading-one {
+    font-size: 5rem;
+  }
+  .hero_right-badge-1 {
+    top: 10rem;
+  }
+  .hero_right-badge-2,
+  .hero_right-badge-3 {
+    top: 32rem;
+  }
+}
+@media (max-width: 1000px) {
+  .hero__content {
+    gap: 2rem;
+  }
+  .hero__left,
+  .hero__right {
+    width: 100%;
+  }
+  .hero_right-back-figure {
+    width: 80%;
+    height: 40rem;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+  }
+  .hero__right-img {
+    right: 0;
+  }
+  .hero_right-badge-1 {
+    left: 0;
+    top: 20rem;
+  }
+  .hero_right-badge-2 {
+    top: 38rem;
+    left: 0;
+  }
+  .hero__right-shape-1 {
+    top: 1rem;
+    left: 0;
+  }
+}
+@media (max-width: 770px) {
+  .hero__left {
+    text-align: center;
+  }
+}

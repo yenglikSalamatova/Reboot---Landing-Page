@@ -1,0 +1,90 @@
+.main__price {
+  padding: 9rem 0;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price__heading-two {
+  margin-bottom: 3rem;
+}
+.price__plans-box-benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.price__plans-icon {
+  background-color: var(--back-gray);
+}
+.price__plans {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.pricing-plans a {
+  display: flex;
+  align-items: center;
+}
+.pricing-plans a i {
+  margin-left: 1rem;
+}
+.price__plans-box {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.3% - 2rem);
+  padding: 3rem 2.5rem;
+  box-shadow: 0.2rem 0 1.5rem 0.5rem rgb(1 6 33 / 6%);
+  border-radius: 1rem;
+  position: relative;
+  transition: 0.4s;
+}
+.price__plans-box:hover {
+  transform: translateY(-1.3%);
+}
+.price__plans-box:hover .circle-filled-icon {
+  color: var(--white-color);
+  background-position: -100% 200%;
+}
+.price__plans-box-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+.price__plans-box .divider {
+  margin: 2.5rem 0;
+  width: 100%;
+  background-color: var(--text-color);
+  opacity: 0.3;
+}
+.price__plans-box .btn {
+  margin-top: 2rem;
+}
+.price__plans-box .btn i {
+  margin-left: 1rem;
+}
+.price__plans-type {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+@media (max-width: 1000px) {
+  .price__plans-box {
+    width: 100%;
+  }
+  .price__plans {
+    width: 70%;
+  }
+}

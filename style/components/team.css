@@ -1,0 +1,126 @@
+.main__team {
+  padding: 9rem 0;
+  background-color: var(--white-color);
+}
+.team__heading-two,
+.team .subheading {
+  text-align: center;
+}
+.team__members {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.team__members-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 3rem);
+  padding: 2rem;
+  box-shadow: 0.2rem 0rem 1.5rem 0.5rem rgb(1 6 33 / 6%);
+  transition: 0.4s;
+  border-radius: 1rem;
+  position: relative;
+}
+.team__members-member:hover .team__members-member--hover {
+  opacity: 1;
+  visibility: visible;
+}
+.team__members-member-img {
+  border-radius: 100%;
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+  object-position: top center;
+  border: 0.3rem solid var(--main-color);
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.circle-plus {
+  margin-top: 3rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: var(--main-color);
+}
+.team__members-member--hover {
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  text-align: center;
+  padding: 2rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+.member--hover__img,
+.member--hover__darkerimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-position: top;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 1rem;
+}
+.member--hover__darkerimg {
+  background-color: var(--heading-color);
+  opacity: 0.8;
+}
+.member--hover__heading-three {
+  margin-top: 3rem;
+  margin-bottom: 0.6rem;
+  color: var(--white-color);
+}
+.member--hover__jobtitle {
+  font-size: 2rem;
+  color: var(--white-color);
+  margin-bottom: 1.5rem;
+}
+.member--hover__info {
+  color: var(--white-color);
+  margin-bottom: 2rem;
+}
+.member--hover__contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.member--hover__contacts__iconbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.member--hover__contacts__iconbox:hover {
+  color: var(--heading-color);
+  background-color: var(--white-color);
+}
+@media (max-width: 1270px) {
+  .team__members-member {
+    width: calc(50% - 2rem);
+  }
+}
+@media (max-width: 770px) {
+  .team__members-member {
+    width: 100%;
+  }
+}
